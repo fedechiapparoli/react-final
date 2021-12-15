@@ -6,7 +6,7 @@
 }
 
 .navBard{
-  background-color: black;
+  background-color: grey;
   width: 100%; 
   display: inline-block;
 }
@@ -37,4 +37,9 @@ align-items: center;
   color: rgb(15, 179, 15);
   font-family: 'Courier New', Courier, monospace;
  
+}
+.navBard .navSide .links .carritoCompas{
+  color: green;
+  width: 2rem;
+  height: auto;
 }
