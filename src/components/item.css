@@ -22,6 +22,11 @@
 }
 .imagen{
     width: 7rem;
+    overflow: hidden;
+    transition: all 0.5 ease-in-out;
+}
+.imagen:hover{
+    transform: scale(1.2);
 }
 .cardsButton{
     margin: 5px;
@@ -38,10 +43,13 @@
 
 .description{
     margin: 4px;
-    background-color: rgb(182, 182, 212);
+    background-color: rgb(151, 151, 218);
     width: 7rem;
     height: 1.5rem;
     font-family: sans-serif;
     border-radius: 5px;
+}
+.description:hover{
+    background-color: rgb(49, 133, 49);
 }
 

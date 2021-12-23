@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Item from './Item.js'
-import vino1 from './imagen/vino1.png'
-import vino2 from './imagen/vino4.jpg'
+//import vino1 from './imagen/vino1.png'
+//import vino2 from './imagen/vino4.jpg'
 import vino3 from './imagen/vino5.png'
 
 
