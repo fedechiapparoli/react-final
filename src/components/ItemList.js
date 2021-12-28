@@ -3,7 +3,7 @@ import Item from './Item.js'
 //import vino1 from './imagen/vino1.png'
 //import vino2 from './imagen/vino4.jpg'
 import vino3 from './imagen/vino5.png'
-
+import './wine.json'
 
 const ItemList = () => {
   const [card, setcard] = useState([])
@@ -14,7 +14,7 @@ const ItemList = () => {
       const getPromise = new Promise ((res, rej) =>{
         const card = [  { id:1, img:vino3, title:'Tinto Malbec', price:'$2000', descripcion:'Vino tinto con aromas a roble y vainilla.'},
                         { id:2, img:vino3, title:'Blanco Chablis', price:'$3000', descripcion:'Vino blanco Chablis dulce, sin guarda' },
-                        { id:3, img:vino3, title:'Rosado Syrha', price:'$4000', descripcion:'Vino Rosado dulce agradable al paladar' },
+                       { id:3, img:vino3, title:'Rosado Syrha', price:'$4000', descripcion:'Vino Rosado dulce agradable al paladar' },
                         { id:4, img:vino3, title:'Tinto Malbec', price:'$5000', descripcion:'Vino Rosado dulce agradable al paladar' }
                            
 
