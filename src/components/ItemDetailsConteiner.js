@@ -1,36 +1,30 @@
 import React, {useState, useEffect} from 'react'
-import './wine.json'
+import database from './wine.json'
 import ItemDetails from './ItemDetails'
+
 const ItemDetailsConteiner = () => {
   
     const [datos, setdatos] = useState([])
-    useEffect(() =>{
-       getDatos()
-      }, [])
-    const getDatos = () => {
-        const newProm = new Promise ((res, rej) =>{
+    
+    const getDatos = (prodId) => {
+        return new Promise ((res, rej) =>{
         
             
         
         setTimeout(() => {
-            res(datos)
+            const itemSearch = database.find(item => item.id === prodId);
+            res(itemSearch)
         }, 2000)
         })
        
-       newProm.them ( res => setdatos(res))
+       
     } 
+    useEffect(() =>{
+        getDatos("1").then(res => setdatos(res));
+      }, [])
     return (
         <div>
-            
-            {
-                datos.map((des)  => {
-                    return <ItemDetails  key={des.id}/> 
-                })
-               
-                  
-                }
-            
-            
+              <ItemDetails   key={datos.id} datos={datos} /> 
         </div>
     )
 }

@@ -1,19 +1,20 @@
 import React from 'react'
-import ItemDetailsConteiner from './ItemDetailsConteiner'
+import ItemCount from './ItemCount'
 
-const ItemDetails = (props) => {
+const ItemDetails = ({datos}) => {
     return (
         <div> 
              <div className='detailConteiner'> 
              <div className='detail'>
-                 <img className='imagenDetail' src='' alt=''></img>
-                 <h3 className='titleDetail'></h3>
-                 <p className='descDetail'>Descripción: </p>
-                 <p className='priceDetail'>Precio: </p>
+                 <img className='imagenDetail' src= {datos.image} alt=''></img>
+                 <h3 className='titleDetail'>{datos.name}</h3>
+                 <p className='descDetail'>Descripción: {datos.description}</p>
+                 <p className='priceDetail'>Precio: {datos.price} </p>
+                 <ItemCount/>
                  <button className='buttonDtail'>Volver</button>
              </div>
              </div>
-            <ItemDetailsConteiner/>
+            
         </div>
     )
 }
