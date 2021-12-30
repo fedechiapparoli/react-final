@@ -28,11 +28,11 @@ align-items: center;
   padding: 7px 13px;
   border-radius: 3px;
 }
- .navSide  a:hover{
+ .navSide .links a:hover{
   background-color: rgb(15, 179, 15) ;
  transition: .7s;
 }
-.navBard .navSide .logo{
+ .logo{
   font-size: 35px;
   color: rgb(15, 179, 15);
   font-family: 'Courier New', Courier, monospace;

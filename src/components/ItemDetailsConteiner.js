@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import database from './wine.json'
 import ItemDetails from './ItemDetails'
+import { useParams } from 'react-router-dom'
 
 const ItemDetailsConteiner = () => {
   
     const [datos, setdatos] = useState([])
-    
+    useParams()
     const getDatos = (prodId) => {
         return new Promise ((res, rej) =>{
         
@@ -20,7 +21,7 @@ const ItemDetailsConteiner = () => {
        
     } 
     useEffect(() =>{
-        getDatos("1").then(res => setdatos(res));
+        getDatos().then(res => setdatos(res))
       }, [])
     return (
         <div>

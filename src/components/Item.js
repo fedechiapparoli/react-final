@@ -1,7 +1,10 @@
 import React from 'react'
 import '../components/item.css'
+import { Link, useParams } from "react-router-dom";
+
 const Item = (props) => {
-    
+ useParams()
+console.log(useParams())
     return (
         <div >
            <section style={{diplay: 'flex'}}> 
@@ -10,7 +13,8 @@ const Item = (props) => {
                 <img className='imagen' src={props.i} alt=''></img>
                 
                     <h4 className='title'>{props.title}</h4>
-                    <button className='description'>Descripción</button>
+                    <Link to={ `/Inicio/${props.id}`} > <button className='description'>Descripción </button></Link>
+                   
                     
                     <p>Precio:{props.price}</p>
                     <button className='cardsButton'>Agregar al carrito</button>

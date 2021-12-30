@@ -24,6 +24,7 @@
     width: 7rem;
     overflow: hidden;
     transition: all 0.5 ease-in-out;
+    
 }
 .imagen:hover{
     transform: scale(1.2);
