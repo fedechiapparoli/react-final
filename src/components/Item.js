@@ -3,8 +3,7 @@ import '../components/item.css'
 import { Link, useParams } from "react-router-dom";
 
 const Item = (props) => {
- useParams()
-console.log(useParams())
+ 
     return (
         <div >
            <section style={{diplay: 'flex'}}> 

@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 const ItemDetailsConteiner = () => {
   
     const [datos, setdatos] = useState([])
-    useParams()
+   const{prodId} = useParams()
     const getDatos = (prodId) => {
         return new Promise ((res, rej) =>{
         

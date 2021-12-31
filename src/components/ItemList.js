@@ -7,7 +7,7 @@ import './wine.json'
 import { Link } from "react-router-dom";
 const ItemList = () => {
   const [card, setcard] = useState([])
-  useEffect(() =>{
+ const {cardId} = useEffect(() =>{
     getCard()
   }, [])
     const getCard = () => {
@@ -35,7 +35,7 @@ const ItemList = () => {
           {  
             card.map((card) => {
                
-        return <Item  key={card.id}  title={card.title} price={card.price} desc={card.descripcion} i={card.img} />;
+        return <Item  key={card.id} title={card.title} price={card.price} desc={card.descripcion} i={card.img} />;
         
       })}
          
