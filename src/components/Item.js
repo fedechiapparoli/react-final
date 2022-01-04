@@ -1,29 +1,28 @@
-import React from 'react'
-import '../components/item.css'
-import { Link, useParams } from "react-router-dom";
+import React from "react";
+import "../components/item.css";
+import { Link } from "react-router-dom";
 
 const Item = (props) => {
- 
-    return (
-        <div >
-           <section style={{diplay: 'flex'}}> 
-        <div className='cardsConteiner'>
-            <div className='card'>
-                <img className='imagen' src={props.i} alt=''></img>
-                
-                    <h4 className='title'>{props.title}</h4>
-                    <Link to={ `/Inicio/${props.id}`} > <button className='description'>Descripción </button></Link>
-                   
-                    
-                    <p>Precio:{props.price}</p>
-                    <button className='cardsButton'>Agregar al carrito</button>
-                </div>
-            </div>
-            </section>
-          </div>
-    
-    )
-    
-} 
+  return (
+    <div>
+      <section style={{ diplay: "flex" }}>
+        <div className="cardsConteiner">
+          <div className="card">
+            <img className="imagen" src={props.image} alt=""></img>
 
-export default Item
+            <h4 className="title">{props.title}</h4>
+            <Link to={`/Inicio/${props.id}`}>
+              {" "}
+              <button className="description">Descripción </button>
+            </Link>
+
+            <p>Precio:{props.price} </p>
+            <button className="cardsButton">Agregar al carrito</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Item;

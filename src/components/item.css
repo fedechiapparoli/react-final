@@ -1,56 +1,53 @@
-*{margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.contenedor{
-    display: flex;
+.contenedor {
+  display: flex;
 }
-.cardsConteiner{
-    width: 100%;
-   display: flex;
+.cardsConteiner {
+  width: 100%;
+  display: flex;
 }
-.card{
-    background-color: white;
-    width: 13rem;
-    height: 20rem;
-    border-radius: solid black 1px;
-    margin: 25px;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0px 1px 10px rgb(0,0,0,0.2);
+.card {
+  background-color: white;
+  width: 13rem;
+  height: 20rem;
+  border-radius: solid black 1px;
+  margin: 25px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.2);
 }
-.imagen{
-    width: 7rem;
-    overflow: hidden;
-    transition: all 0.5 ease-in-out;
-    
+.imagen {
+  width: 7rem;
+  overflow: hidden;
+  transition: all 0.5 ease-in-out;
 }
-.imagen:hover{
-    transform: scale(1.2);
+.imagen:hover {
+  transform: scale(1.2);
 }
-.cardsButton{
-    margin: 5px;
-    width: 10rem;
-    height: 1.5rem;
-    font-family: sans-serif;
-    background-color: rgb(171, 192, 127);
-    border-radius: 5px;
-    
+.cardsButton {
+  margin: 5px;
+  width: 10rem;
+  height: 1.5rem;
+  font-family: sans-serif;
+  background-color: rgb(171, 192, 127);
+  border-radius: 5px;
 }
-.cardsButton:hover{
-    background-color: rgb(228, 119, 119);
+.cardsButton:hover {
+  background-color: rgb(228, 119, 119);
 }
 
-.description{
-    margin: 4px;
-    background-color: rgb(151, 151, 218);
-    width: 7rem;
-    height: 1.5rem;
-    font-family: sans-serif;
-    border-radius: 5px;
+.description {
+  margin: 4px;
+  background-color: rgb(151, 151, 218);
+  width: 7rem;
+  height: 1.5rem;
+  font-family: sans-serif;
+  border-radius: 5px;
 }
-.description:hover{
-    background-color: rgb(49, 133, 49);
+.description:hover {
+  background-color: rgb(49, 133, 49);
 }
-
