@@ -9,7 +9,7 @@
 
 - 📫 How to reach me **fchiapparoli@yahoo.com.ar**
 
-- 📄 Know about my experiences [I have a none experience in React. js. It is my first course of React.](I have a none experience in React. js. It is my first course of React.)
+- 📄 Know about my experiences I have a none experience in React. js. It is my first course of React.
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
