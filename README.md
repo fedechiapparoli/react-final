@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Federico Chiapparoli</h1>
-<h3 align="center">A passionate frontend developer from Argentina</h3>
+<h3 align="center">A passionate Frontend Developer from Argentina</h3>
 
 - 🔭 I’m currently working on [Pericote Bebidadas](https://github.com/fedechiapparoli/prueba-repo)
 
