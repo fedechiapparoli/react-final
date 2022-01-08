@@ -1,8 +1,8 @@
 
  [
-    {"id":"1", "name":" Vino Tinto Borgoña", "image":"../img/vino5.png", "description":"Vino de origen Mendocino, cultivado en zona de montaña. De color rojo intenso, agradable al paladar", "price": "$2000", "stock":"5" },
-    {"id":"2", "name":"Vino Blanco Torrontes", "image":"../img/vino5.png", "description":"Vino de origen Mendocino, cultivado en zona de montaña. De color rojo intenso, agradable al paladar", "price": "$3000", "stock":"4"  },
-    {"id":"3", "name":"Vino Tinto Malbec",  "image":"../img/vino5.png", "description":"Vino de origen Mendocino, cultivado en zona de montaña. De color rojo intenso, agradable al paladar", "price": "$4000", "stock":"2" },
-    {"id":"4", "name":"Vino Tinto Bonarda",  "image":"../img/vino5.png", "description":"Vino de origen Mendocino, cultivado en zona de montaña. De color rojo intenso, agradable al paladar", "price": "$5000", "stock":"2"  }
+    {"id":"1", "name":" Vino Tinto Borgoña", "category":"tinto" , "image":"../img/vino5.png", "description":"Vino de origen Mendocino, cultivado en zona de montaña. De color rojo intenso, agradable al paladar", "price": "$2000", "stock":"5" },
+    {"id":"2", "name":"Vino Blanco Torrontes", "category":"blanco", "image":"../img/vino5.png", "description":"Vino de origen Mendocino, cultivado en zona de montaña. De color rojo intenso, agradable al paladar", "price": "$3000", "stock":"4"  },
+    {"id":"3", "name":"Vino Tinto Malbec", "category":"blanco", "image":"../img/vino5.png", "description":"Vino de origen Mendocino, cultivado en zona de montaña. De color rojo intenso, agradable al paladar", "price": "$4000", "stock":"2" },
+    {"id":"4", "name":"Vino Tinto Bonarda", "category":"tinto",  "image":"../img/vino5.png", "description":"Vino de origen Mendocino, cultivado en zona de montaña. De color rojo intenso, agradable al paladar", "price": "$5000", "stock":"2"  }
 
 ] 

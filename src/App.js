@@ -10,6 +10,7 @@ import Carrito from "./components/Carrito";
 import CartWidgets from "./components/CartWidgets";
 import Item from "./components/Item";
 import ItemDetails from "./components/ItemDetails";
+
 function App() {
   return (
     <div className="App">
@@ -25,6 +26,11 @@ function App() {
             path="Inicio/:id"
             element={<ItemDetailsConteiner />}
           ></Route>
+          <Route
+            exact
+            path="/category/:catId"
+            element={<ItemListConteiner />}
+          />
         </Routes>
       </BrowserRouter>
     </div>

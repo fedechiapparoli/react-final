@@ -1,26 +1,43 @@
 import React, { useState, useEffect } from "react";
-import database from "./wine.json";
+import dataBase from "./wine.json";
 import ItemDetails from "./ItemDetails";
 import { useParams } from "react-router-dom";
+import SpinerLoader from "./SpinerLoader";
 
 const ItemDetailsConteiner = () => {
-  const [datos, setdatos] = useState([]);
+  const [loader, setLoader] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 2000);
+  });
+  const [datos, setDatos] = useState([]);
   const { id } = useParams();
   const getDatos = (prodId) => {
     return new Promise((res, rej) => {
       setTimeout(() => {
-        const itemSearch = database.find((item) => item.id === prodId);
+        const itemSearch = dataBase.find((item) => item.id === prodId);
         res(itemSearch);
       }, 2000);
     });
   };
 
   useEffect(() => {
-    getDatos(id).then((res) => setdatos(res));
+    getDatos(id).then((res) => setDatos(res));
   }, [id]);
   return (
     <div>
-      <ItemDetails key={datos.id} datos={datos} />
+      {loader === true ? (
+        <SpinerLoader
+          style={{
+            display: "flex;",
+            justifyContent: "center;",
+            alignItems: "center;",
+          }}
+        />
+      ) : (
+        <ItemDetails key={datos.id} datos={datos} />
+      )}
     </div>
   );
 };
