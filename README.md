@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Federico Chiapparoli</h1>
-<h3 align="center">A passionate frontend developer from Argentina</h3>
+<h3 align="center">A passionate Frontend Developer from Argentina</h3>
 
 - 🔭 I’m currently working on [Pericote Bebidadas](https://github.com/fedechiapparoli/prueba-repo)
 
@@ -9,7 +9,7 @@
 
 - 📫 How to reach me **fchiapparoli@yahoo.com.ar**
 
-- 📄 Know about my experiences [I have a none experience in React. js. It is my first course of React.](I have a none experience in React. js. It is my first course of React.)
+- 📄 Know about my experiences I have a none experience in React. js. It is my first course of React.
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
