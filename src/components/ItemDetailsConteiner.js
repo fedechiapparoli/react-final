@@ -28,13 +28,7 @@ const ItemDetailsConteiner = () => {
   return (
     <div>
       {loader === true ? (
-        <SpinerLoader
-          style={{
-            display: "flex;",
-            justifyContent: "center;",
-            alignItems: "center;",
-          }}
-        />
+        <SpinerLoader />
       ) : (
         <ItemDetails key={datos.id} datos={datos} />
       )}

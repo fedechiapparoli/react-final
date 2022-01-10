@@ -37,3 +37,10 @@ section {
   display: flex;
   justify-content: center;
 }
+.buttonTerminar {
+  background-color: aqua;
+  width: 10rem;
+  font-size: arial;
+  border-radius: 5px;
+  height: 1.8rem;
+}

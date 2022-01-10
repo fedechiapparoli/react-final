@@ -21,7 +21,6 @@ const ItemList = () => {
       const card = dataBase;
       setTimeout(() => {
         res(card);
-        console.log(card);
       }, 2000);
     });
     getPromise.then((res) => setCard(res));
