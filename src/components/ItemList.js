@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import Item from "./Item.js";
 import dataBase from "./wine.json";
 import SpinerLoader from "./SpinerLoader.js";
-import { useParams } from "react-router-dom";
+
 const ItemList = () => {
   const [card, setCard] = useState([]);
   const [loader, setLoader] = useState(true);
-  const catId = useParams();
-  console.log(catId);
+
   useEffect(() => {
     setTimeout(() => {
       setLoader(false);

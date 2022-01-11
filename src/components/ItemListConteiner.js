@@ -1,21 +1,13 @@
-import React from 'react'
-import ItemList from './ItemList'
+import React from "react";
 
-
-
+import ItemList from "./ItemList";
 
 const ItemListConteiner = () => {
-   
-    return (
-        <div>
-            
-            
-         
-          <ItemList/>
-            </div>
-        
-        
-    )
-}
+  return (
+    <div>
+      <ItemList />
+    </div>
+  );
+};
 
-export default ItemListConteiner
+export default ItemListConteiner;

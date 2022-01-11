@@ -21,6 +21,7 @@ function App() {
           <Route exact path="Contacto" element={<Contacto />}></Route>
           <Route exact path="Nosotros" element={<Nosotros />}></Route>
           <Route exact path="Carrito" element={<Carrito />}></Route>
+
           <Route
             exact
             path="Inicio/:id"
@@ -28,7 +29,7 @@ function App() {
           ></Route>
           <Route
             exact
-            path="/category/:catId"
+            path="/category/:idCategory"
             element={<ItemListConteiner />}
           />
         </Routes>

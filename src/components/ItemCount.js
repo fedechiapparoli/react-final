@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "../components/count.css";
-const ItemCount = ({ onAdd }, { stock }) => {
+const ItemCount = ({ onAdd, stock }) => {
   const [counter, setCounter] = useState(1);
 
-  const addCount = (stock, title, desc, id, price, image) => {
-    if (counter < { stock }) setCounter(counter + 1);
+  const addCount = () => {
+    if (counter < stock) setCounter(counter + 1);
   };
   const sustCount = () => {
     if (counter > 1) setCounter(counter - 1);
