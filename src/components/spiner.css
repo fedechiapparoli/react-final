@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   transform: translateZ(1px);
-  padding-top: 300px;
+  padding-top: 280px;
 }
 .lds-circle > div {
   display: flex;
