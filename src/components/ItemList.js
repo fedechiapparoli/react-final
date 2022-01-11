@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useParams } from "react";
 import Item from "./Item.js";
 import dataBase from "./wine.json";
 import SpinerLoader from "./SpinerLoader.js";
@@ -6,7 +6,8 @@ import SpinerLoader from "./SpinerLoader.js";
 const ItemList = () => {
   const [card, setCard] = useState([]);
   const [loader, setLoader] = useState(true);
-
+  const [categ, setCateg] = useState([]);
+  const { idCategory } = useParams();
   useEffect(() => {
     setTimeout(() => {
       setLoader(false);
@@ -25,6 +26,19 @@ const ItemList = () => {
     getPromise.then((res) => setCard(res));
   };
 
+  const getCateg = (idCategory) => {
+    new Promise((res, rej) => {
+      setTimeout(() => {
+        const myData = idCategory
+          ? dataBase.filter((item) => item.category === idCategory)
+          : dataBase;
+        res(myData);
+      }, 2000);
+    });
+  };
+  useEffect(() => {
+    getCateg(idCategory).then((res) => setCateg(res));
+  }, [idCategory]);
   return (
     <div
       style={{
@@ -38,6 +52,7 @@ const ItemList = () => {
         card.map((card) => {
           return (
             <Item
+              categ={categ}
               key={card.id}
               id={card.id}
               title={card.name}
