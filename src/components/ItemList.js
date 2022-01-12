@@ -7,39 +7,32 @@ import { useParams } from "react-router-dom";
 const ItemList = () => {
   const [card, setCard] = useState([]);
   const [loader, setLoader] = useState(true);
-  const [categ, setCateg] = useState([]);
-  const { idCategory } = useParams();
-  useEffect(() => {
-    setTimeout(() => {
-      setLoader(false);
-    }, 2000);
-  });
-  useEffect(() => {
-    getCard();
-  }, []);
-  const getCard = () => {
-    const getPromise = new Promise((res) => {
-      const card = dataBase;
-      setTimeout(() => {
-        res(card);
-      }, 2000);
-    });
-    getPromise.then((res) => setCard(res));
-  };
 
-  const getCateg = (idCategory) => {
+  const { idCategory } = useParams();
+
+  const items = dataBase;
+  const getCard = () => {
+    setLoader(true);
     return new Promise((res) => {
       setTimeout(() => {
-        const myData = idCategory
-          ? dataBase.filter((item) => item.category === idCategory)
-          : dataBase;
-        res(myData);
+        if (idCategory) {
+          let listaFiltrada = items.filter(
+            (item) => item.category === idCategory
+          );
+          res(listaFiltrada);
+        } else {
+          res(items);
+        }
       }, 2000);
     });
   };
+
   useEffect(() => {
-    getCateg(idCategory).then((res) => setCateg(res));
-  }, [idCategory]);
+    getCard()
+      .then((res) => setCard(res))
+      .finally(() => setLoader(false));
+  }, [idCategory, items]);
+
   return (
     <div
       style={{
@@ -54,7 +47,6 @@ const ItemList = () => {
           return (
             <>
               <Item
-                categ={categ}
                 key={card.id}
                 id={card.id}
                 title={card.name}
