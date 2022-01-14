@@ -10,6 +10,7 @@ import Carrito from "./components/Carrito";
 import CartWidgets from "./components/CartWidgets";
 import Item from "./components/Item";
 import ItemDetails from "./components/ItemDetails";
+import { CartContextProvider } from "./Context/CartContext";
 
 function App() {
   return (
