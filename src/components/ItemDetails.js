@@ -1,8 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import ItemCount from "./ItemCount";
 import "./details.css";
 import { Link } from "react-router-dom";
+import { CartContext } from "../Context/CartContext";
+import Item from "./Item";
+import ItemList from "./ItemList";
 const ItemDetails = ({ datos }) => {
+  const { addItem } = useContext(CartContext);
+  // Constante para agregar al carrito
+  const clickHandler = () => {
+    addItem(items);
+  };
+  console.log(addItem);
   const [add, setAdd] = useState(false);
   const onAdd = () => {
     setAdd(true);
@@ -24,7 +33,12 @@ const ItemDetails = ({ datos }) => {
                 <ItemCount onAdd={onAdd} stock={datos.stock} />
               </>
             )}
-            {add && <button className="buttonTerminar">Terminar Compra</button>}
+            {add && (
+              <button onClick={clickHandler} className="buttonTerminar">
+                Terminar Compra
+              </button>
+            )}
+
             <Link to={"/"}>
               <button className="buttonDetail">Volver</button>
             </Link>

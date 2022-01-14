@@ -2,13 +2,20 @@ import React, { useState, createContext, useContext } from "react";
 
 export const CartContext = createContext();
 export const useCart = () => useContext(CartContext);
+
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const addItem = (Item) => {
-    setCart([...cart, Item]);
+  // Agregar al carrito
+  const addItem = (items) => {
+    setCart([...cart, items]);
   };
-
-  const removeItem = (id) => {};
+  // Remover del carrito
+  const removeItem = (id) => {
+    setCart((precart) => {
+      return precart.filter((items) => items.id === !id);
+    });
+  };
+  // Limpiar el carrito
   const clear = () => {
     setCart([]);
   };
