@@ -5,11 +5,14 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../Context/CartContext";
 
 const ItemDetails = ({ datos }) => {
-  const { addItem } = useContext(CartContext);
-  const { id, price, image } = datos;
+  const { addItem, isInCart } = useContext(CartContext);
+  const [counter, setCounter] = useState(1);
+
+  const { id, price, image, name } = datos;
+
   // Constante para agregar al carrito
   const clickHandler = () => {
-    addItem({ id, price, image });
+    addItem({ id, price: price, image, name, cantidad: counter });
   };
 
   const [add, setAdd] = useState(false);
@@ -30,14 +33,21 @@ const ItemDetails = ({ datos }) => {
             </p>
             {!add && (
               <>
-                <ItemCount onAdd={onAdd} stock={datos.stock} />
+                <ItemCount
+                  onAdd={onAdd}
+                  stock={datos.stock}
+                  counter={counter}
+                  setCounter={setCounter}
+                />
               </>
             )}
             {add && (
               <Link to={"/category/:idCategory/Carts"}>
-                <button onClick={clickHandler} className="buttonTerminar">
-                  Terminar Compra
-                </button>
+                {
+                  <button onClick={clickHandler} className="buttonTerminar">
+                    Terminar Compra
+                  </button>
+                }
               </Link>
             )}
             <Link to={"/"}>
