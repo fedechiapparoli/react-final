@@ -3,15 +3,15 @@ import ItemCount from "./ItemCount";
 import "./details.css";
 import { Link } from "react-router-dom";
 import { CartContext } from "../Context/CartContext";
-import Item from "./Item";
-import ItemList from "./ItemList";
+
 const ItemDetails = ({ datos }) => {
   const { addItem } = useContext(CartContext);
+  const { id, price, image } = datos;
   // Constante para agregar al carrito
   const clickHandler = () => {
-    addItem(items);
+    addItem({ id, price, image });
   };
-  console.log(addItem);
+
   const [add, setAdd] = useState(false);
   const onAdd = () => {
     setAdd(true);
@@ -34,11 +34,12 @@ const ItemDetails = ({ datos }) => {
               </>
             )}
             {add && (
-              <button onClick={clickHandler} className="buttonTerminar">
-                Terminar Compra
-              </button>
+              <Link to={"/category/:idCategory/Carts"}>
+                <button onClick={clickHandler} className="buttonTerminar">
+                  Terminar Compra
+                </button>
+              </Link>
             )}
-
             <Link to={"/"}>
               <button className="buttonDetail">Volver</button>
             </Link>

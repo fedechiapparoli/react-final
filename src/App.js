@@ -12,6 +12,8 @@ import Item from "./components/Item";
 import ItemDetails from "./components/ItemDetails";
 import { CartContextProvider } from "./Context/CartContext";
 
+import Carts from "./components/Carts";
+
 function App() {
   return (
     <div className="App">
@@ -33,6 +35,11 @@ function App() {
             path="/category/:idCategory"
             element={<ItemListConteiner />}
           />
+          <Route
+            exact
+            path="/category/:idCategory/Carts"
+            element={<Carts />}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </div>
