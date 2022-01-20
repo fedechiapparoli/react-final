@@ -11,14 +11,25 @@ import CartWidgets from "./components/CartWidgets";
 import Item from "./components/Item";
 import ItemDetails from "./components/ItemDetails";
 import { CartContextProvider } from "./Context/CartContext";
-
+import db from "./firebase/firebase";
+import { collection, addDoc } from "firebase/firestore";
+import { fileUpload } from "./firebase/fileUpload";
 import Carts from "./components/Carts";
-
+import dataBase from "./components/wine.json";
 function App() {
+  // Mostrar coleection Doc
+
+  const arrayUpload = () => {
+    dataBase.forEach(async (element) => {
+      const imgURL = await fileUpload(element.image);
+      addDoc(collection(db, "products"), { ...element, image: imgURL });
+    });
+  };
   return (
     <div className="App">
       <BrowserRouter>
         <NavBar />
+        <button onClick={arrayUpload}>subir</button>
         <Routes>
           <Route index element={<ItemListConteiner />} />
           <Route exact path="Contacto" element={<Contacto />}></Route>
