@@ -11,7 +11,7 @@ const ItemList = () => {
 
   const { idCategory } = useParams();
 
-  const items = dataBase;
+  /* const items = dataBase;
   const getCard = () => {
     setLoader(true);
     return new Promise((res) => {
@@ -32,14 +32,13 @@ const ItemList = () => {
     getCard()
       .then((res) => setCard(res))
       .finally(() => setLoader(false));
-  }, [idCategory, items]);
-  /* useEffect(async () => {
-    setLoader(true);
+  }, [idCategory, items]);*/
+  useEffect(async () => {
+    //setLoader(true);
 
     const myItems = idCategory
       ? query(collection(db, "items"), where("category", "==", idCategory))
-      : 
-        collection(db, "items");
+      : collection(db, "items");
 
     try {
       const querySnapshot = await getDocs(myItems);
@@ -56,7 +55,7 @@ const ItemList = () => {
     }
 
     setLoader(false);
-  }, [idCategory, card]);*/
+  }, [idCategory]);
 
   return (
     <div

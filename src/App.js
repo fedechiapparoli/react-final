@@ -19,17 +19,17 @@ import dataBase from "./components/wine.json";
 function App() {
   // Mostrar coleection Doc
 
-  const arrayUpload = () => {
+  /* const arrayUpload = () => {
     dataBase.forEach(async (element) => {
       const imgURL = await fileUpload(element.image);
       addDoc(collection(db, "products"), { ...element, image: imgURL });
     });
-  };
+  };*/
   return (
     <div className="App">
       <BrowserRouter>
         <NavBar />
-        <button onClick={arrayUpload}>subir</button>
+
         <Routes>
           <Route index element={<ItemListConteiner />} />
           <Route exact path="Contacto" element={<Contacto />}></Route>
