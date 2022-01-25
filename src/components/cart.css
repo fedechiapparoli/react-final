@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.cartConteiner {
+  display: flex;
+  top: 300px;
+}
+.imageCart {
+  height: auto;
+  width: 6rem;
+}
+.buttonForm {
+  background-color: burlywood;
+  border: none;
+  height: 1.4rem;
+  text-align: center;
+  top: 300px;
+}

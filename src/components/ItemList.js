@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Item from "./Item.js";
-import dataBase from "./wine.json";
+
 import SpinerLoader from "./SpinerLoader.js";
 import { useParams } from "react-router-dom";
 import db from "../firebase/firebase";
@@ -33,28 +33,30 @@ const ItemList = () => {
       .then((res) => setCard(res))
       .finally(() => setLoader(false));
   }, [idCategory, items]);*/
-  useEffect(async () => {
+  useEffect(() => {
     //setLoader(true);
+    const funcAsincrona = async () => {
+      const myItems = idCategory
+        ? query(collection(db, "items"), where("category", "==", idCategory))
+        : collection(db, "items");
 
-    const myItems = idCategory
-      ? query(collection(db, "items"), where("category", "==", idCategory))
-      : collection(db, "items");
+      try {
+        const querySnapshot = await getDocs(myItems);
 
-    try {
-      const querySnapshot = await getDocs(myItems);
+        console.log(querySnapshot.docs);
 
-      console.log(querySnapshot.docs);
+        setCard(
+          querySnapshot.docs.map((el) => {
+            return { ...el.data(), id: el.id };
+          })
+        );
+      } catch {
+        console.log("SE ROMPIO");
+      }
 
-      setCard(
-        querySnapshot.docs.map((el) => {
-          return { ...el.data(), id: el.id };
-        })
-      );
-    } catch {
-      console.log("SE ROMPIO");
-    }
-
-    setLoader(false);
+      setLoader(false);
+    };
+    funcAsincrona();
   }, [idCategory]);
 
   return (

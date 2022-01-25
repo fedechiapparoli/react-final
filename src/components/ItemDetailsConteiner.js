@@ -9,7 +9,6 @@ const ItemDetailsConteiner = () => {
   const [loader, setLoader] = useState(true);
   useEffect(() => {
     // setTimeout(() => {
-    setLoader(false);
     // }, 2000);
   });
   const [datos, setDatos] = useState([]);
@@ -26,7 +25,7 @@ const ItemDetailsConteiner = () => {
       })
       .catch((e) => console.log(e));
     setLoader(false);
-  }, []);
+  }, [id]);
   /* const getDatos = (prodId) => {
     return new Promise((res, rej) => {
       setTimeout(() => {
