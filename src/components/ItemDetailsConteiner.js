@@ -7,16 +7,10 @@ import db from "../firebase/firebase";
 import { getDoc, doc } from "firebase/firestore";
 const ItemDetailsConteiner = () => {
   const [loader, setLoader] = useState(true);
-  useEffect(() => {
-    // setTimeout(() => {
-    // }, 2000);
-  });
+  useEffect(() => {});
   const [datos, setDatos] = useState([]);
   const { id } = useParams();
   useEffect(() => {
-    // setTimeout(() => {
-    //setLoader(false);
-    // }, 2000);
     const ref = doc(db, "items", id);
 
     getDoc(ref)

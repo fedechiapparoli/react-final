@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contacto from "./components/Contacto";
 import Nosotros from "./components/Nosotros";
-import Carrito from "./components/Carrito";
+
 import CartWidgets from "./components/CartWidgets";
 
 import Carts from "./components/Carts";
@@ -21,7 +21,7 @@ function App() {
           <Route index element={<ItemListConteiner />} />
           <Route exact path="Contacto" element={<Contacto />}></Route>
           <Route exact path="Nosotros" element={<Nosotros />}></Route>
-          <Route exact path="Carrito" element={<Carrito />}></Route>
+          <Route exact path="Carrito" element={<CartWidgets />}></Route>
 
           <Route
             exact

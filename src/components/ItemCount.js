@@ -1,8 +1,11 @@
 import React from "react";
 import "../components/count.css";
-const ItemCount = ({ onAdd, stock, counter, setCounter }) => {
-  //const [counter, setCounter] = useState(1);
 
+const ItemCount = ({ onAdd, stock, counter, setCounter }) => {
+  /* const { isInCart } = useContext(CartContext);
+  const norepeat = ()=>{
+    isInCart()
+  }*/
   const addCount = () => {
     if (counter < stock) setCounter(counter + 1);
   };

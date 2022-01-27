@@ -3,9 +3,13 @@ import React, { useContext, useState, useEffect } from "react";
 import { CartContext } from "../Context/CartContext";
 
 import "./cart.css";
-const Carts = () => {
-  const { cart, removeItem } = useContext(CartContext);
+const Carts = (item) => {
+  const { cart, removeItem, clear } = useContext(CartContext);
   const [total, setTotal] = useState(0);
+  // Vaciar Carrito
+  const buttonDelete = () => {
+    clear();
+  };
   const formHandler = async () => {
     const orders = {
       buyer: {
@@ -28,16 +32,19 @@ const Carts = () => {
 
     console.log("ordersId", id);
   };
-  const clickRemove = (id) => {
-    removeItem(id);
-  };
+  // Eliminar Item
+  const clickRemove = () => removeItem(item);
+  // Sumar items
   useEffect(() => {
     let totalCalculado = 0;
+
     cart.forEach((item) => {
       totalCalculado += parseInt(item.price.slice(1)) * item.cantidad;
     });
+
     setTotal(totalCalculado);
   }, [cart]);
+
   return (
     <div className="cartConteiner">
       {cart.map((i) => (
@@ -45,15 +52,19 @@ const Carts = () => {
           <img className="imageCart" src={i.image} alt={i.name} />
           <p> Nombre:{i.name} </p>
           <p> Precio:{i.price}</p>
-          <p> Cantidad: {i.cantidad}</p>
-          <button onClick={() => clickRemove(i.id)}>Eliminar</button>
-          <p> Total: {total}</p>
+          <p> Cantidad: {item.cantidad}</p>
+
+          <button onClick={() => clickRemove()}>Eliminar</button>
         </div>
       ))}
       <div>
+        <div>Total: {total}</div>
         <button className="buttonForm" onClick={formHandler}>
           Completar formulario
         </button>
+      </div>
+      <div>
+        <button onClick={buttonDelete}>Vaciar Carrito</button>
       </div>
     </div>
   );

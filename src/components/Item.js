@@ -17,7 +17,6 @@ const Item = (props) => {
             </Link>
 
             <p>Precio:{props.price} </p>
-            <button className="cardsButton">Agregar al carrito</button>
           </div>
         </div>
       </section>

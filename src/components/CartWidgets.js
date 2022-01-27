@@ -8,10 +8,10 @@ const CartWidgets = () => {
 
   return (
     <div>
-      <Link to="/Carrito">
+      <Link to="/category/:idCategory/Carts">
         <img className="carrito" src={carrito} alt="" />
       </Link>
-      <p>({cart.length})</p>
+      <p className="carritoCounter">{cart.length}</p>
     </div>
   );
 };
