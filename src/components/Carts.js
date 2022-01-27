@@ -59,12 +59,19 @@ const Carts = (item) => {
       ))}
       <div>
         <div>Total: {total}</div>
-        <button className="buttonForm" onClick={formHandler}>
-          Completar formulario
-        </button>
+        <div>
+          <button onClick={buttonDelete}>Vaciar Carrito</button>
+        </div>
+        <h4>Completar formulario</h4>
       </div>
+
       <div>
-        <button onClick={buttonDelete}>Vaciar Carrito</button>
+        <input placeholder="Nombre y Apellido" type="text"></input>
+        <input placeholder="Teléfono" type="number"></input>
+        <input placeholder="Mail" type="emai"></input>
+        <button type="" onClick={() => formHandler()}>
+          Finaliar Compra
+        </button>
       </div>
     </div>
   );

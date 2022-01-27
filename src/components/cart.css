@@ -2,10 +2,7 @@
   margin: 0;
   padding: 0;
 }
-.cartConteiner {
-  display: flex;
-  top: 300px;
-}
+
 .imageCart {
   height: auto;
   width: 6rem;
