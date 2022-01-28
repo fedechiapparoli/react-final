@@ -11,28 +11,6 @@ const ItemList = () => {
 
   const { idCategory } = useParams();
 
-  /* const items = dataBase;
-  const getCard = () => {
-    setLoader(true);
-    return new Promise((res) => {
-      setTimeout(() => {
-        if (idCategory) {
-          let listaFiltrada = items.filter(
-            (item) => item.category === idCategory
-          );
-          res(listaFiltrada);
-        } else {
-          res(items);
-        }
-      }, 2000);
-    });
-  };
-
-  useEffect(() => {
-    getCard()
-      .then((res) => setCard(res))
-      .finally(() => setLoader(false));
-  }, [idCategory, items]);*/
   useEffect(() => {
     //setLoader(true);
     const funcAsincrona = async () => {

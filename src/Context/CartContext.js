@@ -10,28 +10,28 @@ export const CartProvider = ({ children }) => {
     let newCart = [...cart];
     if (isInCart(item)) {
       newCart.find((obj) => obj.id === item.id);
-      setCart([...newCart, item]);
+      setCart(newCart);
     } else {
       setCart([...cart, item]);
     }
   };
-  const removeItem = (itemRecibido) => {
+  /* const removeItem = (itemRecibido) => {
     //borro el item deseado filtrando en la lista los items de distinto id
     const newCart = cart.filter((item) => item.id !== itemRecibido.id);
     setCart(newCart);
-  };
+  };*/
   // Remover del carrito
-  /* const removeItem = (id) => {
+  const removeItem = (id) => {
     const arrayAux = cart.filter((d) => d.id === !id);
     setCart(arrayAux);
-  };*/
+  };
   // No repeticion del Item
   // const isInCart = (id) => {
   // return cart.some((d) => d === id);
   // };
-  const isInCart = (itemRecibido) => {
+  function isInCart(itemRecibido) {
     return cart.some((item) => item.id === itemRecibido.id) ? true : false;
-  };
+  }
   // Limpiar el carrito
   const clear = () => {
     setCart([]);
