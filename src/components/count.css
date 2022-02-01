@@ -1,49 +1,47 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.conteiner{
-    text-align: center;
+.conteiner {
+  text-align: center;
 }
-.conteinerCount{
-    height: 5rem;
-    width: 20rem;
-    margin: auto;
-    background-color: beige;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    border: solid 1px;
-}   
-.contador{
-    text-align: center;
-    font-size: 1rem;
+.conteinerCount {
+  height: 5rem;
+  width: 20rem;
+  margin: auto;
+  background-color: beige;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  border: 0;
 }
-.botonCount{
-    font-size: 1rem;
-    cursor: pointer;
-   
-    background-color: aliceblue;
-    border-radius: 50%;
-    height: 2rem;
-    width: 2rem;
+.contador {
+  text-align: center;
+  font-size: 1rem;
 }
-.addCarrito{
-    font-size: 1rem;
-   text-align: center;
-   height: 2rem;
-   width: 20rem;
-   margin-top: 0.2rem;
-   background-color: rgb(153, 194, 153);
-   border: none;
-   cursor: pointer;
-   border-radius: 5px;
-
+.botonCount {
+  font-size: 1rem;
+  cursor: pointer;
+  border: 0;
+  background-color: rgb(217, 223, 228);
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
 }
-.addCarrito:hover{
-    background-color: red;
-    transition: .8s;
-    
+.addCarrito {
+  font-size: 1rem;
+  text-align: center;
+  height: 2rem;
+  width: 20rem;
+  margin-top: 0.2rem;
+  background-color: rgb(153, 194, 153);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.addCarrito:hover {
+  background-color: rgb(80, 204, 80);
+  transition: 0.8s;
 }

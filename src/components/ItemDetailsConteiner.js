@@ -20,18 +20,7 @@ const ItemDetailsConteiner = () => {
       .catch((e) => console.log(e));
     setLoader(false);
   }, [id]);
-  /* const getDatos = (prodId) => {
-    return new Promise((res, rej) => {
-      setTimeout(() => {
-        const itemSearch = dataBase.find((item) => item.id === prodId);
-        res(itemSearch);
-      }, 2000);
-    });
-  };
 
-  useEffect(() => {
-    getDatos(id).then((res) => setDatos(res));
-  }, [id]);*/
   return (
     <div>
       {loader === true ? (

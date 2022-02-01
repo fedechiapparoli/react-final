@@ -28,26 +28,25 @@
 .imagen:hover {
   transform: scale(1.2);
 }
-/*.cardsButton {
-  margin: 5px;
-  width: 10rem;
-  height: 1.5rem;
-  font-family: sans-serif;
-  background-color: rgb(171, 192, 127);
-  border-radius: 5px;
-}
-.cardsButton:hover {
-  background-color: rgb(228, 119, 119);
-}*/
 
 .description {
-  margin: 4px;
-  background-color: rgb(151, 151, 218);
-  width: 7rem;
+  margin: 6px;
+  background-color: rgb(221, 221, 240);
+  width: 8rem;
   height: 1.5rem;
-  font-family: sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   border-radius: 5px;
+  border: 0;
 }
 .description:hover {
   background-color: rgb(49, 133, 49);
+}
+.priceName {
+  font-size: 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 8px;
+}
+.title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 2px;
 }

@@ -16,7 +16,7 @@ const Item = (props) => {
               <button className="description">Descripción </button>
             </Link>
 
-            <p>Precio:{props.price} </p>
+            <p className="priceName">Precio:{props.price} </p>
           </div>
         </div>
       </section>

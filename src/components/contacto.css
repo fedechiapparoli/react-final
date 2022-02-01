@@ -1,0 +1,42 @@
+.tituloContacto {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 20px;
+}
+.contactoConteiner {
+  width: 400px;
+  height: 450px;
+  background-color: rgb(185, 179, 179);
+}
+.formContacto {
+  display: block;
+}
+.celdaContacto {
+  width: 95%;
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 30px;
+}
+.labelContacto {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.textContacto {
+  width: 95%;
+  height: 10rem;
+  margin-left: 10px;
+  margin-top: 25px;
+}
+.buttonContacto {
+  text-align: center;
+  margin: 20px;
+}
+.buttonEnviar {
+  width: 80px;
+  height: 30px;
+  border: 0;
+  border-radius: 5px;
+  background-color: rgb(223, 152, 59);
+  cursor: pointer;
+}

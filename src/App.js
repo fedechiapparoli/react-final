@@ -6,9 +6,7 @@ import NavBar from "./components/NavBar.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contacto from "./components/Contacto";
 import Nosotros from "./components/Nosotros";
-
 import CartWidgets from "./components/CartWidgets";
-
 import Carts from "./components/Carts";
 
 function App() {
