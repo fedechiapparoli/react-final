@@ -12,7 +12,9 @@ const ItemList = () => {
   const { idCategory } = useParams();
 
   useEffect(() => {
-    //setLoader(true);
+    // Spiner
+    setLoader(true);
+    //Firebase
     const funcAsincrona = async () => {
       const myItems = idCategory
         ? query(collection(db, "items"), where("category", "==", idCategory))
@@ -20,8 +22,6 @@ const ItemList = () => {
 
       try {
         const querySnapshot = await getDocs(myItems);
-
-        console.log(querySnapshot.docs);
 
         setCard(
           querySnapshot.docs.map((el) => {
@@ -49,17 +49,15 @@ const ItemList = () => {
       ) : (
         card.map((card) => {
           return (
-            <>
-              <Item
-                key={card.id}
-                id={card.id}
-                title={card.name}
-                price={card.price}
-                desc={card.descripcion}
-                image={card.image}
-                stock={card.stock}
-              />
-            </>
+            <Item
+              key={card.id}
+              id={card.id}
+              title={card.name}
+              price={card.price}
+              desc={card.descripcion}
+              image={card.image}
+              stock={card.stock}
+            />
           );
         })
       )}

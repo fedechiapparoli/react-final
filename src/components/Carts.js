@@ -6,10 +6,11 @@ import { CartContext } from "../Context/CartContext";
 import "./cart.css";
 const Carts = () => {
   const { cart, removeItem, clear } = useContext(CartContext);
+  // Estados para pasar al formulario
   const [total, setTotal] = useState(0);
-  const [name, setName] = useState();
-  const [phone, setPhone] = useState();
-  const [mail, setMail] = useState();
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [mail, setMail] = useState("");
   // Vaciar Carrito
   const buttonDelete = () => {
     clear();
@@ -18,6 +19,7 @@ const Carts = () => {
   // Enviar buyer e item
   const formHandler = async (e) => {
     e.preventDefault();
+
     const orders = {
       buyer: {
         name: name,
@@ -28,16 +30,18 @@ const Carts = () => {
       items: [...cart],
       total: { total },
     };
+    // Vaciar campos form
     setName("");
     setPhone("");
     setMail("");
     const db = getFirestore();
     const { id } = await addDoc(collection(db, "orders"), orders);
-
+    // ID de la compra se ve por consola
     console.log("ordersId", id);
   };
   // Eliminar Item
-  const clickRemove = () => removeItem();
+  const clickRemove = (id) => removeItem(id);
+
   // Sumar items
   useEffect(() => {
     let totalCalculado = 0;
@@ -70,6 +74,7 @@ const Carts = () => {
               <p className="datosCart"> Precio:{i.price}</p>
               <p className="datosCart"> Cantidad: {i.cantidad}</p>
             </div>
+
             <div>
               <button
                 className="buttonRemove"
@@ -102,6 +107,7 @@ const Carts = () => {
               placeholder=" Nombre y Apellido:"
               type="text"
               value={name}
+              id="name"
               onChange={(e) => setName(e.target.value)}
             ></input>
             <input
@@ -109,6 +115,7 @@ const Carts = () => {
               placeholder=" Teléfono:"
               type="text"
               value={phone}
+              id="phone"
               onChange={(e) => setPhone(e.target.value)}
             ></input>
             <input
@@ -116,10 +123,11 @@ const Carts = () => {
               placeholder=" Mail:"
               type="email"
               value={mail}
+              id="email"
               onChange={(e) => setMail(e.target.value)}
             ></input>
             <button className="formButton" type="submit">
-              Finaliar Compra
+              Finalizar Compra
             </button>
           </form>
         </div>

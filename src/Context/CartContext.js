@@ -15,20 +15,15 @@ export const CartProvider = ({ children }) => {
       setCart([...cart, item]);
     }
   };
-  /* const removeItem = (itemRecibido) => {
-    //borro el item deseado filtrando en la lista los items de distinto id
-    const newCart = cart.filter((item) => item.id !== itemRecibido.id);
-    setCart(newCart);
-  };*/
-  // Remover del carrito
+
   const removeItem = (id) => {
-    const arrayAux = cart.filter((d) => d.id === !id);
-    setCart(arrayAux);
+    //borro el item deseado filtrando en la lista los items de distinto id
+    const newCart = cart.filter((i) => i.id !== id);
+    setCart(newCart);
   };
-  // No repeticion del Item
-  // const isInCart = (id) => {
-  // return cart.some((d) => d === id);
-  // };
+
+  // No repetición del Item
+
   function isInCart(itemRecibido) {
     return cart.some((item) => item.id === itemRecibido.id) ? true : false;
   }

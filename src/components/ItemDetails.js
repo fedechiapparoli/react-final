@@ -4,11 +4,11 @@ import "./details.css";
 import { Link } from "react-router-dom";
 import { CartContext } from "../Context/CartContext";
 
-const ItemDetails = ({ datos, item }) => {
+const ItemDetails = ({ datos }) => {
   const { addItem } = useContext(CartContext);
   const [counter, setCounter] = useState(1);
 
-  const { id, price, image, name } = datos;
+  const { id, price, name, image } = datos;
 
   // Constante para agregar al carrito
   const clickHandler = () => {
@@ -47,7 +47,7 @@ const ItemDetails = ({ datos, item }) => {
               <Link to={"/category/:idCategory/Carts"}>
                 {
                   <button onClick={clickHandler} className="buttonTerminar">
-                    Agregado al Carrito
+                    Ir al Carrito
                   </button>
                 }
               </Link>

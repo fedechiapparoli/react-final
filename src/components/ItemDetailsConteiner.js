@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
-//import dataBase from "./wine.json";
 import ItemDetails from "./ItemDetails";
 import { useParams } from "react-router-dom";
 import SpinerLoader from "./SpinerLoader";
 import db from "../firebase/firebase";
 import { getDoc, doc } from "firebase/firestore";
+
 const ItemDetailsConteiner = () => {
+  // Loader Spiner
   const [loader, setLoader] = useState(true);
   useEffect(() => {});
   const [datos, setDatos] = useState([]);
   const { id } = useParams();
+  //Firebase
   useEffect(() => {
     const ref = doc(db, "items", id);
 

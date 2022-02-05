@@ -54,10 +54,14 @@
   height: 30px;
   font-size: 18px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background-color: rgb(105, 105, 199);
+  background-color: rgb(171, 209, 106);
   border: 0;
+  border-radius: 5px;
   margin-top: 15px;
   cursor: pointer;
+}
+.formButton:hover {
+  background-color: rgb(15, 179, 15);
 }
 .cartConteiner {
   display: block;
@@ -68,6 +72,7 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
 }
+/*Boton eliminar items*/
 .buttonRemove {
   width: 70px;
   height: 27px;
@@ -76,6 +81,9 @@
   border: 0;
   border-radius: 5px;
   cursor: pointer;
+}
+.buttonRemove:hover {
+  background-color: rgb(15, 179, 15);
 }
 /* Boton Vaciar carrito*/
 .buttonDeleteConteiner {
@@ -91,6 +99,9 @@
   background-color: rgb(171, 209, 106);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   cursor: pointer;
+}
+.buttonDelete:hover {
+  background-color: rgb(15, 179, 15);
 }
 /*Total*/
 .totalConteiner {
@@ -113,4 +124,7 @@
   width: 150px;
   height: 30px;
   outline: none;
+}
+.buttonSeguirComprando:hover {
+  background-color: rgb(171, 209, 106);
 }
